@@ -8,6 +8,12 @@ CIB seven, and opens the live Aria page where you and Claude work on it together
 ## Install
 
 ```text
+/plugin install aria-modeler --marketplace 3eAI-Labs/aria-claude-plugin
+```
+
+On Claude Code older than 2.1.275, add the marketplace first:
+
+```text
 /plugin marketplace add 3eAI-Labs/aria-claude-plugin
 /plugin install aria-modeler@3eai-labs
 ```
@@ -26,6 +32,7 @@ promo grant. Claude's own model designs the workflow, so no LLM API key is invol
 |---|---|
 | `plugins/aria-modeler/.mcp.json` | The Aria MCP server (`https://products.3eai-labs.com/3e-aria-modeler/mcp`) with the public OAuth client `aria-modeler-mcp-claude-code` and callback port 8765 |
 | `plugins/aria-modeler/skills/aria-loop/SKILL.md` | How Claude searches the catalog, generates and fixes workflows, opens the live page and reads your notes |
+| `plugins/aria-modeler/README.md` | The plugin's own description: what it contains and what it sends where |
 
 The plugin holds no secret: the OAuth client is public and uses PKCE, and your sign-in token is
 kept by Claude Code.
