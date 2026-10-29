@@ -56,3 +56,8 @@ claude plugin validate ./plugins/aria-modeler
 ## Privacy
 
 https://3eai-labs.com/en/privacy
+
+## License
+
+MIT, see [LICENSE](LICENSE). The license covers this repository; the Aria Modeler service it
+connects to has its own terms.

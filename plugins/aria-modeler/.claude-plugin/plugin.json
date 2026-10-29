@@ -8,6 +8,8 @@
     "url": "https://3eai-labs.com"
   },
   "homepage": "https://products.3eai-labs.com/3e-aria-modeler/",
+  "repository": "https://github.com/3eAI-Labs/aria-claude-plugin",
+  "license": "MIT",
   "privacyPolicyUrl": "https://3eai-labs.com/en/privacy",
   "keywords": ["rpa", "workflow", "uipath", "bpmn", "automation"]
 }
