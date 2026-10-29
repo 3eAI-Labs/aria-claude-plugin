@@ -1,0 +1,15 @@
+{
+  "name": "3eai-labs",
+  "description": "3eAI Labs plugins for Claude Code",
+  "owner": {
+    "name": "3eAI Labs Ltd",
+    "url": "https://3eai-labs.com"
+  },
+  "plugins": [
+    {
+      "name": "aria-modeler",
+      "source": "./plugins/aria-modeler",
+      "description": "Build executable RPA workflows with Aria and work on them in the live Aria page"
+    }
+  ]
+}

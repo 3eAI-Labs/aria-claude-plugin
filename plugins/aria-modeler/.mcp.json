@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "aria-modeler": {
+      "type": "http",
+      "url": "https://products.3eai-labs.com/3e-aria-modeler/mcp",
+      "oauth": {
+        "clientId": "aria-modeler-mcp-claude-code",
+        "callbackPort": 8765
+      }
+    }
+  }
+}

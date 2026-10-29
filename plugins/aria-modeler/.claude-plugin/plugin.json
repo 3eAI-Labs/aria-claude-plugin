@@ -1,0 +1,13 @@
+{
+  "name": "aria-modeler",
+  "displayName": "Aria Modeler",
+  "version": "0.1.0",
+  "description": "Build executable RPA workflows (UiPath, Python Code, Flowable, CadenzaFlow, CIB seven) with Aria, and work on them in the live Aria page",
+  "author": {
+    "name": "3eAI Labs Ltd",
+    "url": "https://3eai-labs.com"
+  },
+  "homepage": "https://products.3eai-labs.com/3e-aria-modeler/",
+  "privacyPolicyUrl": "https://3eai-labs.com/en/privacy",
+  "keywords": ["rpa", "workflow", "uipath", "bpmn", "automation"]
+}
