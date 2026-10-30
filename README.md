@@ -60,6 +60,14 @@ claude plugin validate .
 claude plugin validate ./plugins/aria-modeler
 ```
 
+## Terms
+
+The Aria service runs under the Aria Terms of Service:
+https://products.3eai-labs.com/3e-aria-modeler/?view=terms
+
+That page goes live with the next Aria release. Subscribing or redeeming a promo code asks you
+to accept the current version first.
+
 ## Privacy
 
 https://3eai-labs.com/en/privacy
