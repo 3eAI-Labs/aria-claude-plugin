@@ -47,7 +47,8 @@ Everything goes to the Aria MCP server above, and only when Claude calls one of 
 Aria stores your projects, workflows and notes in your Aria account. Aria refuses content that
 looks like a credential, so never put passwords or keys in a process description or a note.
 When Claude opens the live page, the skill may ask it to run your system's browser opener
-(`xdg-open`, `open` or `start`) with the page link; the page then loads from the same Aria site.
+(`xdg-open`, `open` or `start`) with the page link, and only for a link on
+`https://products.3eai-labs.com/3e-aria-modeler/`; any other link is shown, not opened.
 
 Privacy policy: https://3eai-labs.com/en/privacy
 

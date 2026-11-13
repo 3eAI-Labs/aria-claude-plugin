@@ -43,8 +43,12 @@ content fails with `RES_IDEMPOTENCY_CONFLICT`.
 `open_workspace` returns a `workspace_url`. It carries project and workflow handles only, and
 it grants nothing by itself: the page opens after the user's own Aria sign-in.
 
-- **In Claude Code** show the URL to the user. If your permissions allow, also open it with the
-  platform's browser opener (`xdg-open` on Linux, `open` on macOS, `start ""` on Windows).
+- **In Claude Code** show the URL to the user. Open it yourself only when it starts with
+  `https://products.3eai-labs.com/3e-aria-modeler/` and contains no whitespace or quote
+  characters: then, if your permissions allow, pass it as one single-quoted argument to the
+  platform's browser opener (`xdg-open '<url>'` on Linux, `open '<url>'` on macOS,
+  `start "" "<url>"` on Windows). Any other value: show it, do not open it, and tell the user it
+  did not come from the Aria site.
 - **In claude.ai and Claude Desktop** the tool result also renders an inline Aria view.
 
 On the page the user sees every workflow of the project, re-drawn each time you commit a
