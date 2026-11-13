@@ -3,7 +3,7 @@
 This marketplace holds one plugin, **aria-modeler**. It connects Claude Code to
 [Aria Modeler](https://products.3eai-labs.com/3e-aria-modeler/), which turns a process you
 describe into an executable workflow for UiPath, Python Code, Flowable, CadenzaFlow or
-CIB seven, and opens the live Aria page where you and Claude work on it together.
+CIB seven.
 
 ## Install
 
@@ -31,7 +31,7 @@ promo grant. Claude's own model designs the workflow, so no LLM API key is invol
 | Path | Purpose |
 |---|---|
 | `plugins/aria-modeler/.mcp.json` | The Aria MCP server (`https://products.3eai-labs.com/3e-aria-modeler/mcp`) with the public OAuth client `aria-modeler-mcp-claude-code` and callback port 8765 |
-| `plugins/aria-modeler/skills/aria-loop/SKILL.md` | How Claude searches the catalog, generates and fixes workflows, opens the live page and reads your notes |
+| `plugins/aria-modeler/skills/aria-loop/SKILL.md` | How Claude searches the catalog, generates and fixes workflows, and reads the generator's warnings |
 | `plugins/aria-modeler/README.md` | The plugin's own description: what it contains and what it sends where |
 
 The plugin holds no secret: the OAuth client is public and uses PKCE, and your sign-in token is
@@ -39,10 +39,9 @@ kept by Claude Code.
 
 ## The live page
 
-When a project exists, Claude calls `open_workspace` and gives you a link to the Aria page.
-The page shows every workflow of the project and redraws it each time Claude changes it. Select
-a workflow or a step and leave a note; Claude reads your notes at the start of your next turn,
-and the page marks them as read. The page cannot start a turn by itself.
+A live Aria page, where you see the project's workflows redrawn as Claude changes them and leave
+notes for Claude, comes with a later Aria release. The production server does not offer it yet;
+the skill uses it only when the server lists its tools.
 
 ## Already added Aria by hand?
 
@@ -65,8 +64,7 @@ claude plugin validate ./plugins/aria-modeler
 The Aria service runs under the Aria Terms of Service:
 https://products.3eai-labs.com/3e-aria-modeler/?view=terms
 
-That page goes live with the next Aria release. Subscribing or redeeming a promo code asks you
-to accept the current version first.
+Subscribing asks you to accept the current version in the checkout.
 
 ## Privacy
 
