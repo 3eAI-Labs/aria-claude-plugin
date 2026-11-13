@@ -6,7 +6,7 @@ description: Build, fix and iterate executable RPA workflows with the Aria Model
 # Working with Aria
 
 Aria turns a process definition you write into an executable workflow for one target:
-`uipath`, `rpaframework` (Python Code), `flowable`, `cadenzaflow` or `cibseven`. You design
+`uipath`, `rpaframework` (RPA Framework, Python), `flowable`, `cadenzaflow` or `cibseven`. You design
 the process; Aria validates it against its action catalog and generates the artifact. Aria
 never calls a language model on this path, so nothing you send is rewritten for you: what you
 get back is what the definition says.
