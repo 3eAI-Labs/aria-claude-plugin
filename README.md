@@ -2,8 +2,15 @@
 
 This marketplace holds one plugin, **aria-modeler**. It connects Claude Code to
 [Aria Modeler](https://products.3eai-labs.com/3e-aria-modeler/), which turns a process you
-describe into an executable workflow for UiPath, Python Code, Flowable, CadenzaFlow or
-CIB seven.
+describe into an executable workflow for UiPath, RPA Framework (Python), Flowable, CadenzaFlow
+or CIB seven.
+
+For example, ask Claude: *"Build a UiPath robot that reads the invoices in an Excel file and
+emails a summary to the finance team."* Claude designs the steps, Aria checks each one against
+its action catalog and generates the workflow files.
+
+Catalog search is free. Generating and changing workflows needs an Aria subscription
+(£9 per month) or a promo code. Support: support@3eai-labs.com
 
 ## Install
 

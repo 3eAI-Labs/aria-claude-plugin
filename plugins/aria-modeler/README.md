@@ -1,7 +1,7 @@
 # Aria Modeler
 
-Describe a business process to Claude and get an executable workflow for UiPath, Python Code
-(rpaframework), Flowable, CadenzaFlow or CIB seven. Claude designs the process with its own
+Describe a business process to Claude and get an executable workflow for UiPath, RPA
+Framework (Python), Flowable, CadenzaFlow or CIB seven. Claude designs the process with its own
 model; [Aria Modeler](https://products.3eai-labs.com/3e-aria-modeler/) checks every step against
 its action catalog and generates the workflow files. Aria calls no language model on this path,
 so you need no LLM API key.
@@ -22,7 +22,7 @@ later).
 ## What you need
 
 - An Aria account. Catalog search works before you sign in; generating and changing workflows
-  needs an Aria subscription or promo grant.
+  needs an Aria subscription (£9 per month) or a promo code.
 - In Claude Code, sign in once: `/mcp` → `plugin:aria-modeler:aria-modeler` → **Authenticate**.
   Your browser opens the Aria sign-in page and Claude Code receives the result on
   `localhost:8765`.
@@ -52,6 +52,8 @@ When Claude opens the live page, the skill may ask it to run your system's brows
 `https://products.3eai-labs.com/3e-aria-modeler/`; any other link is shown, not opened.
 
 Privacy policy: https://3eai-labs.com/en/privacy
+
+Support: support@3eai-labs.com
 
 ## License
 
