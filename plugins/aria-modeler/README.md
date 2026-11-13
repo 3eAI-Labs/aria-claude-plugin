@@ -6,9 +6,9 @@ model; [Aria Modeler](https://products.3eai-labs.com/3e-aria-modeler/) checks ev
 its action catalog and generates the workflow files. Aria calls no language model on this path,
 so you need no LLM API key.
 
-Once a project exists, Claude gives you a link to the live Aria page. The page shows every
-workflow of the project and redraws it each time Claude changes it. Select a workflow or a step
-and leave a note; Claude reads your notes at the start of your next turn.
+A live Aria page, where you see the project's workflows redrawn as Claude changes them and leave
+notes for Claude, comes with a later Aria release. The production server does not offer it yet;
+the skill uses it only when the server lists its tools.
 
 ## Install in Claude Code
 
@@ -32,7 +32,8 @@ later).
 - **One remote MCP server**, `https://products.3eai-labs.com/3e-aria-modeler/mcp`, operated by
   3eAI Labs Ltd. It uses the public OAuth client `aria-modeler-mcp-claude-code` with PKCE.
 - **One skill**, `aria-loop`, which tells Claude how to search the catalog, generate and fix
-  workflows, read the generator's warnings, open the live page and read your notes.
+  workflows and read the generator's warnings; once the server offers the live page, also how to
+  open it and read your notes.
 
 The plugin has no hooks, no commands, no local programs and no secrets.
 
@@ -41,7 +42,7 @@ The plugin has no hooks, no commands, no local programs and no secrets.
 Everything goes to the Aria MCP server above, and only when Claude calls one of its tools:
 
 - the process definitions, workflow names and step parameters Claude writes for you;
-- the notes and the selection you make on the live Aria page;
+- once the live Aria page is available, the notes and the selection you make on it;
 - your Aria sign-in token, which Claude Code keeps and sends with each call.
 
 Aria stores your projects, workflows and notes in your Aria account. Aria refuses content that

@@ -9,7 +9,7 @@
     {
       "name": "aria-modeler",
       "source": "./plugins/aria-modeler",
-      "description": "Build executable RPA workflows with Aria and work on them in the live Aria page"
+      "description": "Build executable RPA workflows with Aria from Claude Code"
     }
   ]
 }
