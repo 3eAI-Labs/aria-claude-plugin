@@ -13,8 +13,10 @@ get back is what the definition says.
 
 ## The loop
 
-1. **Search the catalog with short keywords**, not sentences: `excel read`, `send email`,
-   `http request`. A whole sentence usually finds nothing. Use `list_actions` to browse.
+1. **Search the catalog** with `search_actions`. A sentence that says what the step does
+   works (`download a file from a web address`) and returns a broad list; short keywords
+   (`excel read`, `send email`, `http request`) return a narrow one. Read the descriptions and
+   pick the action that does the step. Use `list_actions` to browse.
 2. **Inspect each action** you plan to use with `get_action_detail`: its parameters, types and
    outputs are the only ones the generator understands.
 3. **Validate the parameters** of each step with `validate_action_params`, then call
