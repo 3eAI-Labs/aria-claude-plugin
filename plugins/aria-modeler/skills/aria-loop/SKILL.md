@@ -6,10 +6,10 @@ description: Build, fix and iterate executable RPA workflows with the Aria Model
 # Working with Aria
 
 Aria turns a process definition you write into an executable workflow for one target:
-`uipath`, `rpaframework` (RPA Framework, Python), `flowable`, `cadenzaflow` or `cibseven`. You design
-the process; Aria validates it against its action catalog and generates the artifact. Aria
-never calls a language model on this path, so nothing you send is rewritten for you: what you
-get back is what the definition says.
+`uipath`, `rpaframework` (RPA Framework, Python), `flowable`, `cadenzaflow`, `cibseven` or
+`zoumadi`. You design the process; Aria validates it against its action catalog and generates
+the artifact. Aria never calls a language model on this path, so nothing you send is rewritten
+for you: what you get back is what the definition says.
 
 ## The loop
 
@@ -21,7 +21,14 @@ get back is what the definition says.
    outputs are the only ones the generator understands.
 3. **Validate the parameters** of each step with `validate_action_params`, then call
    `generate_bpmn` with `mode`, `target`, the `process_definition` and an `idempotency_key`.
-   - `mode: "native"` supports `target: "uipath"` only; `portable` supports all five targets.
+   - `mode: "native"` supports `target: "uipath"` only; `portable` supports all six targets.
+   - `target: "zoumadi"` runs `task` and `call_activity` steps in one line. A definition with
+     a gateway, loop, timer, user task, script, sub-process or try/catch is refused, naming the
+     step; so is a parameter with an expression (`${amount > 100}`, `${row.total}`). Write a
+     value, or name data items as `${name}`. If the process needs a decision, a repetition or
+     a wait, tell the user Zoumadi does not run it yet and offer another BPMN target. The
+     result's `editor_json` is the worker contract: it holds each step's inputs, which a
+     Zoumadi BPMN does not carry, and the data a start must send. Give the user both.
    - Pass `project_id` to add a workflow to an existing project; omit it to create one.
    - Use `packaging: "files"` while iterating. Ask for `project`, `docker` or `full` only for
      the final artifact.

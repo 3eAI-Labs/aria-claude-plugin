@@ -1,7 +1,7 @@
 # Aria Modeler
 
 Describe a business process to Claude and get an executable workflow for UiPath, RPA
-Framework (Python), Flowable, CadenzaFlow or CIB seven. Claude designs the process with its own
+Framework (Python), Flowable, CadenzaFlow, CIB seven or Zoumadi. Claude designs the process with its own
 model; [Aria Modeler](https://products.3eai-labs.com/3e-aria-modeler/) checks every step against
 its action catalog and generates the workflow files. Aria calls no language model on this path,
 so you need no LLM API key.
